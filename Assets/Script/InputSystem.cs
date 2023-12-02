@@ -26,6 +26,7 @@ public abstract class InputSystem : MonoBehaviour
     /// <returns>The x and y direction in which to rotate</returns>
     public abstract Vector2 GetRotation();
 
+
     /// <summary>
     /// Retrieves whether the input system wants to call menu
     /// </summary>

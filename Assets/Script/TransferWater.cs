@@ -2,31 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TransferWater : MonoBehaviour
+public class TransferWater : EventInteraction
 {
-    [SerializeField] GameObject player;
     [SerializeField] WaterStorage from;
     [SerializeField] WaterStorage to;
     [SerializeField] float transferRate;
-    [SerializeField] float range;
-    // Start is called before the first frame update
-    void Start()
+
+
+    public override void OnStartInteract()
     {
-        
+        base.OnStartInteract();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnStopInteract()
     {
-        if ((player.transform.position - transform.position).magnitude < range)
-        {
-            to.FillBucket(from.EmptyBucket(transferRate * Time.deltaTime));
-        }
-
+        base.OnStopInteract();
     }
-    private void OnDrawGizmosSelected()
+    public override void OnInteract()
     {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, range);
+        to.FillBucket(from.EmptyBucket(transferRate * Time.deltaTime));
     }
 }

@@ -31,8 +31,29 @@ public class AnimationManager : MonoBehaviour
 
     }
 
+    bool overrideAnimation;
+    string overrideName;
+
+    public void OverrideAnimation(string name)
+    {
+        overrideAnimation = true;
+        overrideName = name;
+    }
+
+    public void ClearOverride()
+    {
+        overrideAnimation = false;
+    }
+
     private void Update()
     {
-        UpdateAnimator();
+        if (overrideAnimation)
+        {
+            animator.Play(overrideName);
+        }
+        else
+        {
+            UpdateAnimator();
+        }
     }
 }
