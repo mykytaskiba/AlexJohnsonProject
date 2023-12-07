@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WorldInteractionController : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class WorldInteractionController : MonoBehaviour
 
     
     [SerializeField] Movement movement;
+
+    [SerializeField] GameObject uiObject;
+    [SerializeField] TextMeshProUGUI interactionText;
 
     // Start is called before the first frame update
     void Start()
@@ -40,14 +44,22 @@ public class WorldInteractionController : MonoBehaviour
             WorldInteraction closest = GetClosest();
             if (closest == null)
             {
+                uiObject.SetActive(false);
                 return;
             }
             if (closest.WithinRange())
             {
+                uiObject.SetActive(true);
+                interactionText.text = closest.GetMessage();
+
                 if (Input.GetKeyDown(KeyCode.LeftShift))
                 {
                     StartInteraction(closest);
                 }
+            } else
+            {
+                uiObject.SetActive(false);
+
             }
         }
     }
@@ -80,10 +92,13 @@ public class WorldInteractionController : MonoBehaviour
         WorldInteraction closest = null;
         foreach (WorldInteraction worldInteraction in allInteraction)
         {
-            if (closest == null || worldInteraction.DistanceToPlayer() < closest.DistanceToPlayer())
+            if (worldInteraction.CanInteract())
             {
+                if (closest == null || worldInteraction.DistanceToPlayer() < closest.DistanceToPlayer())
+                {
 
-                closest = worldInteraction;
+                    closest = worldInteraction;
+                }
             }
         }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class AquiferDepletion : MonoBehaviour
 {
     [SerializeField] float depletionRate;
+    [SerializeField] float depletionAcceleration;
     [SerializeField] WaterStorage waterStorage;
     
 
@@ -12,5 +13,7 @@ public class AquiferDepletion : MonoBehaviour
     void Update()
     {
         waterStorage.EmptyBucket(depletionRate * Time.deltaTime);
+
+        depletionRate += depletionAcceleration * Time.deltaTime;
     }
 }

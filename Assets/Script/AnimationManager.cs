@@ -40,6 +40,16 @@ public class AnimationManager : MonoBehaviour
         overrideName = name;
     }
 
+    bool playOnce;
+    bool hasPlayed;
+
+    public void PlayOnce(string name)
+    {
+        hasPlayed = false;
+        playOnce = true;
+        overrideName = name;
+    }
+
     public void ClearOverride()
     {
         overrideAnimation = false;
@@ -47,6 +57,16 @@ public class AnimationManager : MonoBehaviour
 
     private void Update()
     {
+        if (playOnce)
+        {
+            if (!hasPlayed)
+            {
+                animator.Play(overrideName);
+                hasPlayed = true;
+            }
+            return;
+        }
+
         if (overrideAnimation)
         {
             animator.Play(overrideName);

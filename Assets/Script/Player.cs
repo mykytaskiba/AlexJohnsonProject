@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
 
     public int toolAmount;
+    public int maxTools = 9;
 
     public void AddTool()
     {

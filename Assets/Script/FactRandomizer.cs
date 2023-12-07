@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class CursorSetter : MonoBehaviour
+public class FactRandomizer : MonoBehaviour
 {
-    [SerializeField] bool cursorVisible;
-    [SerializeField] CursorLockMode cursorLockMode;
+    [SerializeField] string[] allFacts;
+
+    [SerializeField] TextMeshProUGUI text;
+
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = cursorVisible;
-        Cursor.lockState = cursorLockMode;
+        text.text = allFacts[Random.Range(0, allFacts.Length)];    
     }
 
     // Update is called once per frame

@@ -1,21 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class CursorSetter : MonoBehaviour
+using TMPro;
+public class ToolCounter : MonoBehaviour
 {
-    [SerializeField] bool cursorVisible;
-    [SerializeField] CursorLockMode cursorLockMode;
+    [SerializeField] TextMeshProUGUI text;
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = cursorVisible;
-        Cursor.lockState = cursorLockMode;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        text.text = "Tools: " + Player.Get().toolAmount + " / " + Player.Get().maxTools;
     }
 }

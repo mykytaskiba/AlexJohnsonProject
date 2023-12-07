@@ -12,6 +12,11 @@ public abstract class WorldInteraction : MonoBehaviour
     public abstract void OnStartInteract();
     public abstract void OnStopInteract();
 
+    public virtual bool CanInteract()
+    {
+        return true;
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
@@ -26,5 +31,11 @@ public abstract class WorldInteraction : MonoBehaviour
     public float DistanceToPlayer()
     {
         return (transform.position - Player.Get().transform.position).magnitude;
+    }
+
+    [SerializeField] string displayMessage;
+    public string GetMessage()
+    {
+        return displayMessage;
     }
 }

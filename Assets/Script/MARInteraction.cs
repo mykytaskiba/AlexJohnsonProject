@@ -22,6 +22,11 @@ public class MARInteraction : EventInteraction
         }
     }
 
+    public override bool CanInteract()
+    {
+        return (Player.Get().toolAmount == Player.Get().maxTools);
+    }
+
     public override void OnStartInteract()
     {
         currentTime = 0;
