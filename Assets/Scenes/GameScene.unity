@@ -187,7 +187,7 @@ MonoBehaviour:
   OnEndInteraction:
     m_PersistentCalls:
       m_Calls: []
-  waitTime: 10
+  waitTime: 2
   OnDone:
     m_PersistentCalls:
       m_Calls:
@@ -455,8 +455,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -748,7 +748,7 @@ RectTransform:
   - {fileID: 162166161}
   - {fileID: 1780130383}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -797,23 +797,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 231.09006
+      value: 185.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 54.515686
+      value: 18.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 168.0765
+      value: 42.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.46406937
+      value: 0.63560677
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -821,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.8857989
+      value: -0.77201295
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -833,7 +833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -124.7
+      value: -101.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1240,7 +1240,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1a5045a12526cd64d83aaf9c74b1b5c9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1a5045a12526cd64d83aaf9c74b1b5c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1964,7 +1964,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1a5045a12526cd64d83aaf9c74b1b5c9, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1a5045a12526cd64d83aaf9c74b1b5c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2285,15 +2285,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 958833792}
-        m_TargetAssemblyTypeName: SceneHelpers, BCD
+        m_TargetAssemblyTypeName: SceneHelpers, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &958833794
@@ -2316,7 +2316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Space To Restart
+  m_text: Press Space To Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2834,7 +2834,7 @@ RectTransform:
   - {fileID: 937095720}
   - {fileID: 707532956}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3668,15 +3668,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1351875363}
-        m_TargetAssemblyTypeName: SceneHelpers, BCD
+        m_TargetAssemblyTypeName: SceneHelpers, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: PostGameScreen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1351875365
@@ -3776,6 +3776,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351875361}
   m_CullTransparentMesh: 1
+--- !u!1001 &1352874464
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 69.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 22.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 131.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.009599311
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9999539
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -178.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
+      propertyPath: m_Name
+      value: TowerWindmill (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33de3aa431fdda54f8d5d7e6b5d9800f, type: 3}
 --- !u!1 &1385453210
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,7 +4034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterStored: 0
-  maxWater: 100
+  maxWater: 250
   minWater: 0
 --- !u!114 &1385453221
 MonoBehaviour:
@@ -4347,7 +4404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depletionRate: 2
-  depletionAcceleration: 0.022
+  depletionAcceleration: 0.0115
   waterStorage: {fileID: 1658316103}
 --- !u!114 &1658316105
 MonoBehaviour:
@@ -4519,7 +4576,7 @@ RectTransform:
   m_Children:
   - {fileID: 1872644394}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4803,7 +4860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baloonPrefab: {fileID: 823350534408834387, guid: d317db1771130f04d9f6e040f7aeed72, type: 3}
   spawnCooldown: 30
-  spawnLimit: 10
+  spawnLimit: 20
   radius: 100
 --- !u!1001 &1848518622
 PrefabInstance:

@@ -13,11 +13,12 @@ public class AnimationManager : MonoBehaviour
 
         Vector3 velocity = targetRigidbody.velocity;
 
+        /*
         if (Mathf.Abs(velocity.y) > 0.05f)
         {
             animator.Play("Fall");
             return;
-        }
+        }*/
 
         if (velocity.magnitude > 0.05f)
         {

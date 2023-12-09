@@ -292,7 +292,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  waitTime: 15
+  waitTime: 18
   pickupAnimation: WaterFill
   allFacts:
   - "25% of the world\u2019s population, and 40% of the world\u2019s agricultural
